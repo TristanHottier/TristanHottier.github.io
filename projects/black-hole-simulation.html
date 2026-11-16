@@ -5,20 +5,31 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Real-Time General-Relativistic Black Hole Simulation | Tristan Hottier</title>
 <meta name="description" content="Real-time WebGL2/GLSL ray marcher integrating null geodesics in the Schwarzschild metric: photon ring, gravitational lensing and a Doppler-beamed accretion disk. Live demo available.">
+<link rel="canonical" href="https://tristanhottier.github.io/projects/black-hole-simulation.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Real-Time General-Relativistic Black Hole Simulation">
+<meta property="og:description" content="Real-time WebGL2/GLSL ray marcher integrating null geodesics in the Schwarzschild metric: photon ring, gravitational lensing and a Doppler-beamed accretion disk. Live demo available.">
+<meta property="og:url" content="https://tristanhottier.github.io/projects/black-hole-simulation.html">
+<meta property="og:image" content="https://tristanhottier.github.io/assets/black-hole-simulation/cover.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='white'%3ETH%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="detail">
+<header class="bar">
+  <div class="wrap"><a class="home" href="../index.html">Tristan Hottier</a><a href="../index.html#projects">← All projects</a></div>
+</header>
 <main class="wrap">
-  <p class="back"><a href="../index.html#projects">← All projects</a></p>
   <h1>Real-Time General-Relativistic Black Hole Simulation</h1>
   <p class="role">Personal project · 2025</p>
-  <!-- Media slot: to use a photo, replace the <svg> with e.g.
-           <img src="../assets/x6.jpg" alt="Describe the photo" width="1280" height="720">
-           (or a <video controls preload="none" poster="../assets/x6.jpg" src="../assets/x6.mp4"></video>). -->
-  <figure class="media" id="media-x6"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="9"/><ellipse cx="32" cy="32" rx="26" ry="8"/><circle cx="32" cy="32" r="17" stroke-dasharray="2 5"/></svg></figure>
-  <p><a class="btn primary" href="https://tristanhottier.github.io/BH_Sim/">Open live demo</a></p>
+  <figure class="hero">
+    <div class="media" id="media-x6"><img src="../assets/black-hole-simulation/cover.jpg" alt="Tilted orange-gold accretion disk wrapped around a black hole shadow, with a lensed bright ring over a purple starfield" width="1280" height="720" fetchpriority="high" decoding="async"></div>
+    <figcaption>Gravitational lensing of a thin accretion disk around a Schwarzschild black hole.</figcaption>
+  </figure>
+  <p class="actions"><a class="btn primary" href="https://tristanhottier.github.io/BH_Sim/">Open live demo</a></p>
   <section>
     <h2>Overview</h2>
     <p>I wrote a WebGL2/GLSL ray marcher that integrates null geodesics (RK4, adaptive step) in the Schwarzschild metric. It renders the photon ring, gravitational lensing and a Doppler-beamed accretion disk.</p>
@@ -27,9 +38,40 @@
     <h2>Tools</h2>
     <p>I used WebGL2 and GLSL, and built it with OpenCode and a self-hosted agentic AI workflow.</p>
   </section>
+
+  <section class="prose" aria-labelledby="gal">
+    <h2 id="gal">Gallery</h2>
+    <p>Screenshots of the live demo.</p>
+  </section>
+  <div class="gallery">
+      <figure>
+        <a href="../assets/black-hole-simulation/view-1.jpg"><img src="../assets/black-hole-simulation/view-1.jpg" alt="Edge-on view of a glowing disk arcing over and under a black hole against a dark starfield" width="1280" height="720" loading="lazy" decoding="async"></a>
+        <figcaption>The disk seen edge-on, with its light bent over and under the hole.</figcaption>
+      </figure>
+      <figure>
+        <a href="../assets/black-hole-simulation/view-2.jpg"><img src="../assets/black-hole-simulation/view-2.jpg" alt="Large tilted disk seen at a steep angle, with a dark central shadow and bright inner edge" width="1120" height="900" loading="lazy" decoding="async"></a>
+        <figcaption>The disk viewed more face-on after dragging to rotate the camera.</figcaption>
+      </figure>
+      <figure>
+        <a href="../assets/black-hole-simulation/view-3.jpg"><img src="../assets/black-hole-simulation/view-3.jpg" alt="Close view of an orange disk surrounding a dark circular shadow with a faint lensed ring" width="1120" height="900" loading="lazy" decoding="async"></a>
+        <figcaption>A closer zoom on the disk and the shadow of the black hole.</figcaption>
+      </figure>
+      <figure class="wide">
+        <a href="../assets/black-hole-simulation/view-4-interface.jpg"><img src="../assets/black-hole-simulation/view-4-interface.jpg" alt="Full frame of the black hole demo with its title, disk tilt, Kepler rotation and resolution controls" width="1600" height="900" loading="lazy" decoding="async"></a>
+        <figcaption>The live demo interface with disk tilt and resolution controls.</figcaption>
+      </figure>
+  </div>
+  <p class="back"><a href="../index.html#projects">← All projects</a></p>
 </main>
 <footer>
-  <div class="wrap">© Tristan Hottier · <a href="mailto:tristan_hottier@berkeley.edu">tristan_hottier@berkeley.edu</a></div>
+  <div class="wrap">
+    <span>© Tristan Hottier · <a href="mailto:tristan_hottier@berkeley.edu">tristan_hottier@berkeley.edu</a></span>
+    <ul>
+      <li><a href="../Tristan_Hottier_Resume.pdf">CV (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/tristan-hottier">LinkedIn</a></li>
+      <li><a href="https://github.com/TristanHottier">GitHub</a></li>
+    </ul>
+  </div>
 </footer>
 </body>
 </html>
