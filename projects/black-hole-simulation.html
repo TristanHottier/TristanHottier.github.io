@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Real-Time General-Relativistic Black Hole Simulation | Tristan Hottier</title>
-<meta name="description" content="Real-time WebGL2/GLSL ray marcher integrating null geodesics in the Schwarzschild metric: photon ring, gravitational lensing and a Doppler-beamed accretion disk. Live demo available.">
+<meta name="description" content="A real-time WebGL2/GLSL ray marcher I wrote. It integrates null geodesics in the Schwarzschild metric and renders the photon ring, gravitational lensing and a Doppler-beamed accretion disk. Try the live demo.">
 <link rel="canonical" href="https://tristanhottier.github.io/projects/black-hole-simulation.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Real-Time General-Relativistic Black Hole Simulation">
-<meta property="og:description" content="Real-time WebGL2/GLSL ray marcher integrating null geodesics in the Schwarzschild metric: photon ring, gravitational lensing and a Doppler-beamed accretion disk. Live demo available.">
+<meta property="og:description" content="A real-time WebGL2/GLSL ray marcher I wrote. It integrates null geodesics in the Schwarzschild metric and renders the photon ring, gravitational lensing and a Doppler-beamed accretion disk. Try the live demo.">
 <meta property="og:url" content="https://tristanhottier.github.io/projects/black-hole-simulation.html">
 <meta property="og:image" content="https://tristanhottier.github.io/assets/black-hole-simulation/cover.jpg">
 <meta property="og:image:width" content="1280">
@@ -19,36 +19,33 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="detail">
+<a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <div class="wrap"><a class="home" href="../index.html">Tristan Hottier</a><a href="../index.html#projects">← All projects</a></div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
   <h1>Real-Time General-Relativistic Black Hole Simulation</h1>
   <p class="role">Personal project · 2025</p>
   <figure class="hero">
-    <div class="media" id="media-x6"><img src="../assets/black-hole-simulation/cover.jpg" alt="Black hole seen nearly edge-on, with the accretion disk lensed into rings above and below the shadow" width="1280" height="720" fetchpriority="high" decoding="async"></div>
+    <div class="media"><img src="../assets/black-hole-simulation/cover.jpg" alt="Black hole seen nearly edge-on, with the accretion disk lensed into rings above and below the shadow" width="1280" height="720" fetchpriority="high" decoding="async"></div>
     <figcaption>Gravitational lensing of a thin accretion disk around a Schwarzschild black hole.</figcaption>
   </figure>
   <p class="actions"><a class="btn primary" href="https://tristanhottier.github.io/BH_Sim/">Open live demo</a></p>
   <section>
     <h2>Overview</h2>
     <p>I wrote a WebGL2/GLSL ray marcher that integrates null geodesics (RK4, adaptive step) in the Schwarzschild metric. It renders the photon ring, gravitational lensing and a Doppler-beamed accretion disk.</p>
+    <p>I built it with OpenCode and a self-hosted agentic AI workflow.</p>
   </section>
-  <section>
-    <h2>Tools</h2>
-    <p>I used WebGL2 and GLSL, and built it with OpenCode and a self-hosted agentic AI workflow.</p>
-  </section>
-
   <section class="prose" aria-labelledby="gal">
     <h2 id="gal">Gallery</h2>
     <p>Screenshots of the live demo.</p>
   </section>
   <div class="gallery">
-      <figure>
+      <figure class="wide">
         <a href="../assets/black-hole-simulation/edge-on.jpg"><img src="../assets/black-hole-simulation/edge-on.jpg" alt="Black hole seen nearly edge-on: the accretion disk crosses in front of the shadow and its far side is lensed into rings above and below" width="1600" height="935" loading="lazy" decoding="async"></a>
         <figcaption>The disk seen nearly edge-on. Its far side is lensed over and under the shadow.</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <a href="../assets/black-hole-simulation/tilted.jpg"><img src="../assets/black-hole-simulation/tilted.jpg" alt="Tilted accretion disk around a black hole shadow, brighter on one side from Doppler beaming, with a thin photon ring" width="1600" height="883" loading="lazy" decoding="async"></a>
         <figcaption>A tilted view. One side of the disk is brighter from Doppler beaming.</figcaption>
       </figure>

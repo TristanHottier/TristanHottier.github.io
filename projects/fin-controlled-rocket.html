@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Fin-Controlled Rocket | Tristan Hottier</title>
-<meta name="description" content="Roll-control GNC for ARES, a fin-controlled rocket: 6-DoF architecture, Simulink modeling, sensor fusion and PID optimization. Single-semester project; roll-axis stabilization worked in flight.">
+<meta name="description" content="I led GNC for ARES, a fin-controlled rocket, and designed its 6-DoF architecture with Simulink modeling, sensor fusion and PID optimization. We flew it twice with roll control only, and roll stabilization worked on both flights.">
 <link rel="canonical" href="https://tristanhottier.github.io/projects/fin-controlled-rocket.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fin-Controlled Rocket">
-<meta property="og:description" content="Roll-control GNC for ARES, a fin-controlled rocket: 6-DoF architecture, Simulink modeling, sensor fusion and PID optimization. Single-semester project; roll-axis stabilization worked in flight.">
+<meta property="og:description" content="I led GNC for ARES, a fin-controlled rocket, and designed its 6-DoF architecture with Simulink modeling, sensor fusion and PID optimization. We flew it twice with roll control only, and roll stabilization worked on both flights.">
 <meta property="og:url" content="https://tristanhottier.github.io/projects/fin-controlled-rocket.html">
 <meta property="og:image" content="https://tristanhottier.github.io/assets/fin-controlled-rocket/cover.jpg">
 <meta property="og:image:width" content="1280">
@@ -19,32 +19,29 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="detail">
+<a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <div class="wrap"><a class="home" href="../index.html">Tristan Hottier</a><a href="../index.html#projects">← All projects</a></div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main">
   <h1>Fin-Controlled Rocket</h1>
   <p class="role">GNC Lead · Cercle Aérospatial CentraleSupélec · 2025–2026</p>
   <figure class="hero">
-    <div class="media" id="media"><img src="../assets/fin-controlled-rocket/cover.jpg" alt="The ARES rocket with a clear body tube showing its internal electronics and fin actuation, resting on a launch rail" width="1280" height="720" fetchpriority="high" decoding="async"></div>
+    <div class="media"><img src="../assets/fin-controlled-rocket/cover.jpg" alt="The ARES rocket with a clear body tube showing its internal electronics and fin actuation, resting on a launch rail" width="1280" height="720" fetchpriority="high" decoding="async"></div>
     <figcaption>ARES on its launch rail.</figcaption>
   </figure>
   <section>
     <h2>Overview</h2>
     <p>This is ARES, the fin-controlled rocket of the Cercle Aérospatial CentraleSupélec (2025–2026). We had one semester and a very small budget.</p>
-    <p>We deliberately limited the scope to roll control because we judged 3-axis control too risky. Pitch and yaw control were out of scope.</p>
+    <p>We limited the scope to roll control on purpose, because we judged 3-axis control too risky. Pitch and yaw control were out of scope.</p>
   </section>
   <section>
     <h2>My role</h2>
-    <p>I was the GNC Lead. I designed a 6-DoF GNC architecture with Simulink modeling, sensor fusion and PID optimization. I also did the flight electronics.</p>
+    <p>As GNC Lead, I designed a 6-DoF GNC architecture with Simulink modeling, sensor fusion and PID optimization. I also did the flight electronics.</p>
   </section>
   <section>
     <h2>Results</h2>
     <p>We flew it twice with roll control only, and roll-axis stabilization worked on both flights.</p>
-  </section>
-  <section>
-    <h2>Tools</h2>
-    <p>I used Simulink.</p>
   </section>
   <section>
     <h2>Report</h2>
@@ -53,12 +50,12 @@
   </section>
   <section class="prose" aria-labelledby="gal">
     <h2 id="gal">Gallery</h2>
-    <p>These are screenshots of simulations of the full 6-DoF GNC design, plus the design model of the rocket. Only roll control was flown.</p>
+    <p>Photos and CAD of the rocket, plus screenshots of simulations of the full 6-DoF GNC design. Only roll control was flown.</p>
   </section>
   <div class="gallery">
       <figure>
         <a href="../assets/fin-controlled-rocket/rocket-on-rail.jpg"><img src="../assets/fin-controlled-rocket/rocket-on-rail.jpg" alt="The ARES rocket on a launch rail, seen from above, with its electronics and fin mechanism visible through the clear body tube" width="900" height="1600" loading="lazy" decoding="async"></a>
-        <figcaption>ARES on its launch rail.</figcaption>
+        <figcaption>ARES on its launch rail, seen from above.</figcaption>
       </figure>
       <figure>
         <a href="../assets/fin-controlled-rocket/cad-fin-section.jpg"><img src="../assets/fin-controlled-rocket/cad-fin-section.jpg" alt="CAD model of the rocket's aft section with four fins and internal structure" width="902" height="742" loading="lazy" decoding="async"></a>
@@ -68,19 +65,19 @@
         <a href="../assets/fin-controlled-rocket/rocket-model.png"><img src="../assets/fin-controlled-rocket/rocket-model.png" alt="Cutaway 3D model of a rocket with French-language data labels" width="1600" height="468" loading="lazy" decoding="async"></a>
         <figcaption>Rocket design model (simulation).</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <a href="../assets/fin-controlled-rocket/simulink-6dof-loop.png"><img src="../assets/fin-controlled-rocket/simulink-6dof-loop.png" alt="Simulink block diagram with atmosphere, aerodynamics, sensors, autopilot and four fin actuator blocks" width="1600" height="917" loading="lazy" decoding="async"></a>
         <figcaption>Simulink model of the rocket dynamics and autopilot loop (simulation).</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <a href="../assets/fin-controlled-rocket/simulink-top-level.png"><img src="../assets/fin-controlled-rocket/simulink-top-level.png" alt="Simulink block diagram of the top-level guidance system with navigation, guidance and control blocks" width="1600" height="588" loading="lazy" decoding="async"></a>
         <figcaption>Top-level Simulink model: navigation, guidance and control (simulation).</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <a href="../assets/fin-controlled-rocket/simulink-guidance-logic.png"><img src="../assets/fin-controlled-rocket/simulink-guidance-logic.png" alt="Simulink diagram with a state machine and guidance logic blocks" width="1600" height="945" loading="lazy" decoding="async"></a>
         <figcaption>Simulink guidance logic with a mode state machine (simulation).</figcaption>
       </figure>
-      <figure>
+      <figure class="wide">
         <a href="../assets/fin-controlled-rocket/simulink-navigation.png"><img src="../assets/fin-controlled-rocket/simulink-navigation.png" alt="Simulink block diagram of a navigation computation" width="1600" height="866" loading="lazy" decoding="async"></a>
         <figcaption>Simulink navigation block (simulation).</figcaption>
       </figure>
