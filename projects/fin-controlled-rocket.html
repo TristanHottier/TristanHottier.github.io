@@ -26,22 +26,45 @@
 <main class="wrap" id="main">
   <h1>Fin-Controlled Rocket</h1>
   <p class="role">GNC Lead · Cercle Aérospatial CentraleSupélec · 2025–2026</p>
+  <p class="lead">ARES is a fin-controlled rocket my club built in one semester as a demonstrator. As GNC Lead I designed its guidance and control, and we flew it twice with roll control only. Roll stabilization worked on both flights.</p>
   <figure class="hero">
     <div class="media"><img src="../assets/fin-controlled-rocket/cover.jpg" alt="The ARES rocket with a clear body tube showing its internal electronics and fin actuation, resting on a launch rail" width="1280" height="720" fetchpriority="high" decoding="async"></div>
     <figcaption>ARES on its launch rail.</figcaption>
   </figure>
-  <section>
-    <h2>Overview</h2>
-    <p>This is ARES, the fin-controlled rocket of the Cercle Aérospatial CentraleSupélec (2025–2026). We had one semester and a very small budget.</p>
-    <p>We limited the scope to roll control on purpose, because we judged 3-axis control too risky. Pitch and yaw control were out of scope.</p>
+  <section class="glance-wrap">
+    <h2>At a glance</h2>
+    <dl class="glance">
+      <dt>Role</dt><dd>GNC Lead; I also did the flight electronics</dd>
+      <dt>Team</dt><dd>Cercle Aérospatial CentraleSupélec</dd>
+      <dt>Dates</dt><dd>One semester, 2025–2026</dd>
+      <dt>Tools</dt><dd>Simulink; SolidWorks and OpenRocket models for the rocket parameters</dd>
+      <dt>Outcome</dt><dd>Flown with roll control only; roll-axis stabilization worked in flight</dd>
+    </dl>
   </section>
   <section>
-    <h2>My role</h2>
+    <h2>Scope and constraints</h2>
+    <p>ARES was a single-semester demonstrator on a very small budget, with no competition to target. With so little development time, we set the goal at roll control only. We judged full 3-axis control too risky, so pitch and yaw control were out of scope.</p>
+  </section>
+  <section>
+    <h2>What I did</h2>
     <p>As GNC Lead, I designed a 6-DoF GNC architecture with Simulink modeling, sensor fusion and PID optimization. I also did the flight electronics.</p>
   </section>
   <section>
     <h2>Results</h2>
-    <p>We flew it twice with roll control only, and roll-axis stabilization worked on both flights.</p>
+    <p>We flew it twice with roll control only, and roll-axis stabilization worked on both flights. We did not fly pitch or yaw control.</p>
+  </section>
+  <section>
+    <h2>Control design</h2>
+    <p>This is the design work in my report excerpt, in plain terms.</p>
+    <h3>Roll control</h3>
+    <p>Four movable fins with a symmetric profile sit at the propulsion section. A symmetric fin makes no lift at zero angle, so it only produces roll moment when it is deflected. For small angles that moment grows with the deflection, and it also depends on air density, fin area, speed squared and the fin’s lever arm.</p>
+    <p>The guidance command is simply to hold roll angle and roll rate at zero. A proportional-derivative law turns the roll error into a fin deflection:</p>
+    <p class="eq">fin deflection = k<sub>p</sub> · roll angle + k<sub>d</sub> · roll rate</p>
+    <p>Inserted into the moment equation, this gives a damped oscillator, so the gains follow from the response I asked for: reaching 95% of the command in about 0.5 s with under 5% overshoot. SolidWorks and OpenRocket models supplied the rocket parameters. As a later step, the report proposes a controlled roll of up to 90° and a gradual return to zero.</p>
+    <h3>Planned pitch guidance (design only, not flown)</h3>
+    <p>The design has a second phase for when roll is stable. The rocket switches to proportional navigation, which commands a lateral acceleration in proportion to how fast the line of sight to a target rotates. That command becomes an angle-of-attack command, tracked by a PD law on two of the four fins. The other two stay on roll.</p>
+    <h3>Simulink model</h3>
+    <p>The model includes the rocket dynamics, the roll and pitch PD laws, and disturbances and command angles to test robustness. Its guidance logic has a mode state machine. When I wrote the excerpt, the model was operational but still being tuned and validated, so I quote no simulation results.</p>
   </section>
   <section>
     <h2>Report</h2>

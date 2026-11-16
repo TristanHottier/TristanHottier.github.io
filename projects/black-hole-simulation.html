@@ -26,15 +26,43 @@
 <main class="wrap" id="main">
   <h1>Real-Time General-Relativistic Black Hole Simulation</h1>
   <p class="role">Personal project · 2025</p>
+  <p class="lead">A real-time black hole renderer that runs in the browser. I wrote a ray marcher that follows light through the Schwarzschild metric, and the live demo lets you rotate, zoom and tilt the accretion disk.</p>
   <figure class="hero">
     <div class="media"><img src="../assets/black-hole-simulation/cover.jpg" alt="Black hole seen nearly edge-on, with the accretion disk lensed into rings above and below the shadow" width="1280" height="720" fetchpriority="high" decoding="async"></div>
     <figcaption>Gravitational lensing of a thin accretion disk around a Schwarzschild black hole.</figcaption>
   </figure>
   <p class="actions"><a class="btn primary" href="https://tristanhottier.github.io/BH_Sim/">Open live demo</a></p>
+  <section class="glance-wrap">
+    <h2>At a glance</h2>
+    <dl class="glance">
+      <dt>Role</dt><dd>Sole author (personal project)</dd>
+      <dt>Dates</dt><dd>2025</dd>
+      <dt>Tools</dt><dd>Next.js, WebGL2 / GLSL; OpenCode with a self-hosted agentic AI workflow</dd>
+      <dt>Outcome</dt><dd>Live demo (v1.6.1) at tristanhottier.github.io/BH_Sim</dd>
+    </dl>
+  </section>
   <section>
-    <h2>Overview</h2>
-    <p>I wrote a WebGL2/GLSL ray marcher that integrates null geodesics (RK4, adaptive step) in the Schwarzschild metric. It renders the photon ring, gravitational lensing and a Doppler-beamed accretion disk.</p>
-    <p>I built it with OpenCode and a self-hosted agentic AI workflow.</p>
+    <h2>Physics</h2>
+    <p>Light near a black hole follows null geodesics. For a non-rotating black hole they are set by the Schwarzschild metric. The demo header shows the orbit equation it solves, d²u/dφ² + u = 3Mu², with u = 1/r.</p>
+  </section>
+  <section>
+    <h2>Rendering</h2>
+    <p>The renderer is a WebGL2 ray marcher written in GLSL. It integrates each light path with RK4 and an adaptive step. The image shows gravitational lensing, the photon ring and an accretion disk with Doppler beaming, so the side moving toward you looks brighter.</p>
+    <h3>Accuracy references</h3>
+    <p>I iterated on the visual accuracy against Luminet’s simulation and the Gargantua black hole from Interstellar. This was a visual comparison against those references.</p>
+    <h3>Where it came from</h3>
+    <p>It grew out of an earlier course presentation I gave on black holes, which compared Luminet’s simulation, the M87* EHT image and Gargantua. Before this version I wrote a single-file WebGL renderer with a full parameter UI and five presets.</p>
+  </section>
+  <section>
+    <h2>What the demo lets you do</h2>
+    <ul class="list">
+      <li>Drag (or touch and drag) to rotate the camera in θ and φ.</li>
+      <li>Scroll or pinch to zoom.</li>
+      <li>Set the disk tilt with a slider, from −180° to 180°.</li>
+      <li>Switch realistic (Kepler) disk rotation on or off.</li>
+      <li>Set the render resolution from 10% to 100%. It warns that the GPU load is heavy above 90%.</li>
+      <li>Press R to reset the view and Space to pause.</li>
+    </ul>
   </section>
   <section class="prose" aria-labelledby="gal">
     <h2 id="gal">Gallery</h2>

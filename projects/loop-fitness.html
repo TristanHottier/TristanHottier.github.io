@@ -22,20 +22,51 @@
 <main class="wrap" id="main">
   <h1>Loop Fitness</h1>
   <p class="role">Personal project · 2026</p>
+  <p class="lead">Loop Fitness is an installable workout tracker I built for my own resistance-band training plan. I use it on my Android phone, the app is live, and the code is public.</p>
   <p class="actions"><a class="btn primary" href="https://loop-fitness.pages.dev/">Live app</a><a class="btn" href="https://github.com/TristanHottier/loop-fitness">Code</a></p>
-  <section>
-    <h2>Overview</h2>
-    <p>I built Loop Fitness, an installable web app (PWA), to track my own resistance-band training plan, and I use it myself. I built it with an agentic AI coding workflow (OpenCode).</p>
+  <section class="glance-wrap">
+    <h2>At a glance</h2>
+    <dl class="glance">
+      <dt>Role</dt><dd>Designer and developer</dd>
+      <dt>Team</dt><dd>Solo; I am the only user</dd>
+      <dt>Dates</dt><dd>2026</dd>
+      <dt>Tools</dt><dd>React, TypeScript, Vite, Cloudflare Pages, Workers and D1; OpenCode (agentic AI coding)</dd>
+      <dt>Outcome</dt><dd>Live installable app that I use for my own training</dd>
+    </dl>
   </section>
   <section>
-    <h2>Features</h2>
+    <h2>The problem</h2>
+    <p>Gym trackers count in kilograms, but resistance bands come in discrete levels, and the resistance rises as they stretch. So Loop Fitness uses the band as the unit. It builds a resistance ladder from the bands I own and bases progression on that ladder. It tells me when to move up a band.</p>
+  </section>
+  <section>
+    <h2>Main features</h2>
+    <h3>Training</h3>
     <ul class="list">
-      <li>A plan of 4 workouts and 29 exercises.</li>
-      <li>Session logging (bands, reps) with a rest timer.</li>
-      <li>Progress tracking for weight and arm measurements.</li>
-      <li>A muscle-volume map ported from the open-source MuscleMap project (MIT).</li>
-      <li>A nutrition tab, data sync and push reminders.</li>
+      <li>A 4-day program with weekly volume targets for each muscle.</li>
+      <li>Fast logging: one line per set for reps and band, with reps in reserve in one tap.</li>
+      <li>A rest timer that keeps running with the screen locked.</li>
+      <li>The last session’s sets shown on every exercise.</li>
     </ul>
+    <h3>Progression</h3>
+    <ul class="list">
+      <li>A band inventory that builds the ladder, including stacked bands.</li>
+      <li>Per-exercise rules for when to move up or down a band.</li>
+      <li>Plateau detection that suggests a deload week.</li>
+    </ul>
+    <h3>Tracking</h3>
+    <ul class="list">
+      <li>Weekly sets per muscle against its target, with a muscle-volume map ported from the open-source MuscleMap project (MIT).</li>
+      <li>Body weight and arm measurements, plus daily calories and protein, with charts.</li>
+    </ul>
+    <h3>Data</h3>
+    <ul class="list">
+      <li>Works offline. Sync across devices is optional, through a Cloudflare Worker and D1.</li>
+      <li>JSON backup and restore, CSV export and daily weigh-in push reminders.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>How I built it</h2>
+    <p>I built it milestone by milestone with AI coding agents (OpenCode) and recorded each milestone in the repository. Unit tests cover the progression engine and the band ladder.</p>
   </section>
   <section class="prose" aria-labelledby="gal">
     <h2 id="gal">Gallery</h2>
