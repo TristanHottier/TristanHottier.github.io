@@ -30,6 +30,21 @@ h2{font-size:1.3rem;margin:36px 0 16px}
 .role{margin:0 0 10px;color:var(--muted);font-size:.9rem}
 .card p{margin:0 0 8px}
 .card p:last-child{margin-bottom:0}
-.demo{display:inline-block;margin-top:6px;font-weight:600}
+.card{transition:transform .15s,box-shadow .15s}
+.card:hover,.card:focus-within{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.card-link{display:flex;flex-direction:column;flex:1;color:inherit;text-decoration:none}
+.card-link:focus-visible{outline-offset:-3px;border-radius:10px}
+.more{display:inline-block;margin-top:10px;font-weight:600;color:var(--accent)}
+.card-link:hover .more{text-decoration:underline}
+.detail main{padding-bottom:8px}
+.detail h1{font-size:clamp(1.6rem,5vw,2.3rem);margin:20px 0 6px}
+.detail .role{font-size:1rem}
+.detail .media{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:18px 0 22px}
+.detail .media svg{width:120px;height:120px}
+.detail section,.detail main>p{max-width:70ch}
+.detail h2{font-size:1.15rem;margin:26px 0 6px}
+.detail section p{margin:0 0 8px}
+.back{margin:24px 0 0}
 footer{margin:44px 0 0;padding:20px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
 @media print{.skip{display:none}}
