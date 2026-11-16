@@ -27,6 +27,7 @@ h2{font-size:1.3rem;margin:36px 0 16px}
 .media svg{width:84px;height:84px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .body{padding:16px 18px 18px;flex:1}
 .card h3{margin:0 0 2px;font-size:1.1rem;line-height:1.3}
+.date{margin:0;color:var(--muted);font-size:.9rem}
 .role{margin:0 0 10px;color:var(--muted);font-size:.9rem}
 .card p{margin:0 0 8px}
 .card p:last-child{margin-bottom:0}
@@ -34,8 +35,6 @@ h2{font-size:1.3rem;margin:36px 0 16px}
 .card:hover,.card:focus-within{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.12)}
 .card-link{display:flex;flex-direction:column;flex:1;color:inherit;text-decoration:none}
 .card-link:focus-visible{outline-offset:-3px;border-radius:10px}
-.more{display:inline-block;margin-top:10px;font-weight:600;color:var(--accent)}
-.card-link:hover .more{text-decoration:underline}
 .detail main{padding-bottom:8px}
 .detail h1{font-size:clamp(1.6rem,5vw,2.3rem);margin:20px 0 6px}
 .detail .role{font-size:1rem}
