@@ -47,3 +47,4 @@ h2{font-size:1.3rem;margin:36px 0 16px}
 footer{margin:44px 0 0;padding:20px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 @media (prefers-reduced-motion:reduce){.card{transition:none}}
 @media print{.skip{display:none}}
+.nw{white-space:nowrap}
