@@ -63,6 +63,9 @@
     <p>Inserted into the moment equation, this gives a damped oscillator, so the gains follow from the response I asked for: reaching 95% of the command in about 0.5 s with under 5% overshoot. SolidWorks and OpenRocket models supplied the rocket parameters. As a later step, the report proposes a controlled roll of up to 90° and a gradual return to zero.</p>
     <h3>Planned pitch guidance (design only, not flown)</h3>
     <p>The design has a second phase for when roll is stable. The rocket switches to proportional navigation, which commands a lateral acceleration in proportion to how fast the line of sight to a target rotates. That command becomes an angle-of-attack command, tracked by a PD law on two of the four fins. The other two stay on roll.</p>
+    <p>I also wrote a short GNC design note (2025) deriving the guidance law in 3D. With <b>p</b> and <b>v</b> the target's position and velocity relative to the rocket, the line-of-sight rate and the commanded acceleration are:</p>
+    <p class="eq">dλ/dt = (<b>p</b> × <b>v</b>) / ‖<b>p</b>‖² &nbsp;&nbsp;&nbsp; <b>a</b><sub>c</sub> = N · <b>v</b> × dλ/dt</p>
+    <p>N is the navigation gain. The rocket is on a collision course when the line-of-sight rate is zero, so the law steers to drive it to zero. The same note sets out the control side: a PID law on the error between commanded and measured attitude, with gains chosen from a model of the rocket's dynamics.</p>
     <h3>Simulink model</h3>
     <p>The model includes the rocket dynamics, the roll and pitch PD laws, and disturbances and command angles to test robustness. Its guidance logic has a mode state machine. When I wrote the excerpt, the model was operational but still being tuned and validated, so I quote no simulation results.</p>
   </section>
