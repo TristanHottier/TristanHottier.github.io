@@ -12,6 +12,6 @@ I'm Tristan, an aerospace M.Eng. student at UC Berkeley, on a double degree with
 - **[Electric utility vehicle](https://tristanhottier.github.io/projects/electric-utility-vehicle.html):** my father and I built it from scratch in 2018, and it is still in regular use.
 - **[Loop Fitness](https://tristanhottier.github.io/projects/loop-fitness.html):** a workout tracker I built for my own training.
 
-My CV is [here](https://tristanhottier.github.io/Tristan_Hottier_Resume.pdf). If you want to talk about any of this, write to tristan_hottier@berkeley.edu.
+My CV is [here](https://tristanhottier.github.io/Tristan_Hottier_Resume.pdf).
 
 The site is plain HTML and CSS: no framework and no build step.
